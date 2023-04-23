@@ -11,8 +11,9 @@ int main(int argc, char **argv) {
   }
 
   f = fopen("secret.txt", "w");
-  chmod("secret.txt", 0600);
 
   fwrite(argv[1], strlen(argv[1]), 1, f);
   fclose(f);
+
+  chmod("secret.txt", 0600);
 }
